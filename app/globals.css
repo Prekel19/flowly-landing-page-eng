@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F4F4;
+  color: #222222;
+}
+
+::selection {
+  color: #fff;
+  background: #B2D1E6;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* MENU */
+.menu-item {
+  background: linear-gradient(to right, #147487 50%, #222222 50%);
+  transition: background-position 350ms ease;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-item:hover {
+  background-position: 0 100%;
+}
+
+/* HERO SLIDER */
+.hero-slider {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-slider::before,
+.hero-slider::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  height: 105%;
+  width: 20px;
+  background: #fff;
+  z-index: 1;
+  filter: blur(7px);
+}
+
+.hero-slider::before {
+  left: -9px;
+}
+
+.hero-slider::after {
+  right: -9px;
+}
+
+.hero-slider:hover .slider-container {
+  animation-play-state: paused;
+}
+
+.slider-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  animation: slide 15s infinite linear;
+}
+
+.slide img {
+  max-width: unset;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  margin: 0 .125rem;
+  scale: .975;
+  transition: all .3s ease;
+}
+
+.slide img:hover {
+  scale: 1;
+}
+
+/* TESTIMONIALS */
+.opinions-container>.opinion-bg,
+.opinions-container>.opinion-item {
+  transition: all .2s ease;
+}
+
+
+.opinions-container:hover>.opinion-bg {
+  rotate: 2deg;
+}
+
+.opinions-container:hover>.opinion-item {
+  rotate: -2deg;
+}
+
+/* RWD */
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  /* HERO SLIDER */
+  .hero-slider:hover .slider-container {
+    animation-play-state: unset;
+  }
+
+  .slider-container {
+    animation-duration: 25s;
+  }
+
+  .slide img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .slide img:hover {
+    scale: .975;
+  }
+
+  /* TESTIMONIALS */
+  .opinions-container>.opinion-bg {
+    rotate: 1deg;
+  }
+
+  .opinions-container>.opinion-item {
+    rotate: -1deg;
+  }
+
+  .opinions-container:hover>.opinion-bg {
+    rotate: unset;
+  }
+
+  .opinions-container:hover>.opinion-item {
+    rotate: unset;
+  }
+}
