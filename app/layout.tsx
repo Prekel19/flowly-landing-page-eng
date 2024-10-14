@@ -18,6 +18,17 @@ const stixTwoText = STIX_Two_Text({
 export const metadata: Metadata = {
   title: "Flowly",
   description: "Landing page of flowly task manager.",
+  generator: "Next.js",
+  applicationName: "Flowly",
+  openGraph: {
+    title: "Flowly",
+    description: "Landing page of flowly task manager.",
+    url: "https://flowly-site.vercel.app",
+    siteName: "Flowly",
+    images: "./assets/og-image.png",
+    locale: "pl",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
+    <html lang="en">
       <body
         className={`${stixTwoText.variable} ${notoSans.variable} antialiased relative`}
       >
