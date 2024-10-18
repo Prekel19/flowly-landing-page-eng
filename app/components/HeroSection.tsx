@@ -1,11 +1,11 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import slide1 from "../assets/hero-slider/hero-slide-01.jpg";
-import slide2 from "../assets/hero-slider/hero-slide-02.jpg";
-import slide3 from "../assets/hero-slider/hero-slide-03.jpg";
-import slide4 from "../assets/hero-slider/hero-slide-04.jpg";
-import slide5 from "../assets/hero-slider/hero-slide-05.jpg";
-import slide6 from "../assets/hero-slider/hero-slide-06.jpg";
+import slide1 from "../assets/hero-slider/hero-slide-01.webp";
+import slide2 from "../assets/hero-slider/hero-slide-02.webp";
+import slide3 from "../assets/hero-slider/hero-slide-03.webp";
+import slide4 from "../assets/hero-slider/hero-slide-04.webp";
+import slide5 from "../assets/hero-slider/hero-slide-05.webp";
+import slide6 from "../assets/hero-slider/hero-slide-06.webp";
 
 export default function HeroSection() {
   const slides: StaticImageData[] = [slide1, slide2, slide3, slide4, slide5, slide6];

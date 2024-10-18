@@ -77,7 +77,7 @@ body {
 .slider-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  animation: slide 15s infinite linear;
+  animation: slide 17.5s infinite linear;
 }
 
 .slide img {
@@ -150,8 +150,8 @@ body {
   }
 
   .slide img {
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 225px;
   }
 
   .slide img:hover {
@@ -168,10 +168,10 @@ body {
   }
 
   .opinions-container:hover>.opinion-bg {
-    rotate: unset;
+    rotate: 1deg;
   }
 
   .opinions-container:hover>.opinion-item {
-    rotate: unset;
+    rotate: -1deg;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import featuresImg from "../assets/features/working-man-img.png";
+import featuresImg from "../assets/features/working-man-img.webp";
 
 export default function Features() {
   const features: { id: number; title: string; description: string }[] = [
