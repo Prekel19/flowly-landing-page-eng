@@ -1,4 +1,3 @@
-import React from "react";
 import Image, { StaticImageData } from "next/image";
 import slide1 from "../assets/hero-slider/hero-slide-01.webp";
 import slide2 from "../assets/hero-slider/hero-slide-02.webp";

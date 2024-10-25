@@ -4,22 +4,20 @@ import Features from "./components/Features";
 import StepsSection from "./components/StepsSection";
 import Testimonials from "./components/Testimonials";
 import MobileMenu from "./components/MobileMenu";
+import { ITabs } from "./models/interface";
 import logo from "./assets/logo.png";
 import layeredWavesFooter from "./assets/layered-waves-haikei.svg";
 import plFlag from "./assets/pl-flag.svg";
 
 export default function Home() {
-  const tabs: { id: number; name: string }[] = [
+  const tabs: ITabs[] = [
     {
-      id: 1,
       name: "Home",
     },
     {
-      id: 2,
       name: "Features",
     },
     {
-      id: 3,
       name: "Testimonials",
     },
   ];
@@ -35,9 +33,9 @@ export default function Home() {
             priority
           />
           <ul className="flex gap-8 max-md:hidden">
-            {tabs.map((tab) => {
+            {tabs.map((tab, index) => {
               return (
-                <li key={tab.id} className="text-base font-semibold menu-item">
+                <li key={index} className="text-base font-semibold menu-item">
                   <a href={`#${tab.name.toLocaleLowerCase()}`}>{tab.name}</a>
                 </li>
               );
@@ -71,7 +69,7 @@ export default function Home() {
           />
           PL
         </a>
-        <MobileMenu></MobileMenu>
+        <MobileMenu menuTabs={tabs}></MobileMenu>
       </header>
 
       <main>
